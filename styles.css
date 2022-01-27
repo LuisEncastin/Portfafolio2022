@@ -1,0 +1,25 @@
+/*
+1.- Posicionamiento.
+2.- Modelo de caja (Box model).
+3.- Tipografía.
+4.- Visuales
+5.- Otros.
+*/
+:root {
+    /* Colores */
+        --green-strong: #93AA0B;
+        --light-green: #b2cd48;
+        --black: #050F09;
+        --gray: #333333;
+        --just-white: #fff;
+    }
+    /* General */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 62.5%;
+        font-family: 'Montserrat', sans-serif;
+    }
