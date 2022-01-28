@@ -13,13 +13,128 @@
         --gray: #333333;
         --just-white: #fff;
     }
-    /* General */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    text-align: center;
+}
+
+/* Estilos */
+
+#header{
+    width: 100%;
+    background-color: lightslategrey;
+}
+.navbar{
+    width: 100%;
+}
+.section{
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Principal */
+
+#principal{
+    background-color: lightsalmon;
+}
+.principalContainer{
+    background-color: chartreuse;
+    width: 20rem;
+    height: 30rem;
+    margin: 0 auto;
+
+}
+.principalCard--img{
+    background-color: chocolate;
+}
+/* Introducción */
+#introduction{
+    background-color: lightgreen;
+}
+#introduction div {
+    margin: 0 20px;
+    background-color: chartreuse;
+}
+/* Skills */
+#skills{
+    background-color: lightseagreen;
+    padding: 1rem;
+}
+#skillsContainer{
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+
+.itema{
+    outline: solid 2px red;
+    position: relative;
+}
+#skillsContainer img {
+    max-width: 7rem;
+}
+#span {
+    position: absolute;
+    width: 120px;
+}
+/* Portafolio */
+#portfolio{
+    padding: 5%;
+}
+#portfolioContainer{
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, minmax(250px,1fr));
+    grid-gap: 10px;
+}
+@media (min-width: 700px){
+    #portfolioContainer{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(350px,1fr));
+        grid-template-rows: repeat(auto, minmax(250px,1fr));
     }
-    html {
-        font-size: 62.5%;
-        font-family: 'Montserrat', sans-serif;
-    }
+  }
+
+@media (min-width: 1200px){
+#portfolioContainer{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px,1fr));
+    grid-template-rows: repeat(auto, minmax(250px,1fr));
+}
+}
+
+.item{
+    outline: solid 2px red;
+    min-width: 300px;
+    height: 250px;
+}
+
+/* Contacto */
+#contact{
+    background-color: lightgreen;
+}
+/* Footer */
+#footer{
+    background-color: lightseagreen;
+    height: 30px;
+}
