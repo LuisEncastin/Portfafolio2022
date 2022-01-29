@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap'); 
+// Definiendo estilos propios
+$test: #008000;
+$font-family: 'Montserrat', sans-serif;
+
+h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+// Cambiando estilos predefinidos
+$primary: $test;
+$font-family-sans-serif: $font-family;
+
+@import '../libs/bootstrap/scss/bootstrap.scss'
