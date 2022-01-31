@@ -26,7 +26,6 @@ html {
     text-align: center;
 }
 .section{
-    min-height: 100vh;
     width: 100vw;
     height: auto;
     display: flex;
@@ -45,6 +44,7 @@ a {
 .navbar{
     width: 100vw;
     background-color: var(--gray);
+    z-index: 1;
 }
 .navbar-brand{
     height: 40px;
@@ -74,13 +74,14 @@ a {
     background-size: cover;
 }
 #principalLayer{
-    height: 100vh;
+    height: auto;
     width: 100vw;
     background-color: rgba(0, 0, 0,75%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 .principalContainer{
     display: flex;
@@ -166,9 +167,20 @@ a {
     .principalContainer--title, .principalContainer--description {
         font-size: 4rem;
     }
+    #principalLayer{
+        height: 100vh;
+        width: 100vw;
+    }    
 }
 
 @media (min-width: 1200px){
+    .section{
+        min-height: 100vh;
+    }
+    #principalLayer{
+        height: 100vh;
+        width: 100vw;
+    }    
     .principalContainer--img{
         height: 300px;
         width: 300px;
@@ -257,7 +269,7 @@ a {
 /* Skills */
 #skills{
     background-color: var(--green-strong);
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
 .skillsContainer{
     display: flex;
@@ -272,7 +284,6 @@ a {
 }
 
 #skills p{
-    line-height: 2.0rem ;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -281,22 +292,91 @@ a {
     font-size: 40px;
     min-height: 300px;
     width: 90vw;
-    background: LightGray;
+    padding: 2rem 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+
+    background: var(--just-white);
+    border-radius: 20px;
 }
-.itema{
-    outline: solid 2px red;
+.itemSkills{
+    padding: 0 1rem;
+    border-radius: 10px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#skillsgrid img {
-    max-width: 7rem;
+#item--layer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#item--layer p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+#skillsGrid img{
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 150px;
+}
+#skillsGrid span {
+    position: relative;
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+
+@media screen and (min-width: 400px){
+    #item--layer p{
+        font-size: 1.4rem;
+    }
+    #skillsGrid{
+        grid-gap: 0.5rem;
+        padding: 2rem 1rem;
+    }
+    .itemSkills{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 500px){
+    #skills p{
+        font-size: 2rem;
+    }
+    #skillsGrid img{
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 150px;
+    }
+    #item--layer p{
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    #skillsGrid{
+        grid-gap: 1rem;
+    }
+    .itemSkills{
+        outline: 3px solid var(--green-strong);
+        padding: 0 1rem;
+    }
 }
 
 @media screen and (min-width: 700px) {
-    #skills p{
-        line-height: 2rem;
+    #skillsGrid{
+        grid-gap: 2rem;
+        padding: 2rem 2rem;
+    }
+    #item--layer p{
         font-size: 2rem;
+        font-weight: 900;
+    }
+}
+@media screen and (min-width:1200) {
+    #skillsGrid{
+        grid-gap: 3rem;
     }
 }
 
@@ -446,7 +526,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1300px) {
     .portfolioGrid {
         grid-template-columns: repeat(3, 400px);
         grid-template-rows: 1fr 1fr;
@@ -495,7 +575,11 @@ a {
     border-radius: 20px;
     background-color: var(--just-white);
 }
-
+#contact .formulario p{
+    line-height: 2.0rem ;
+    font-size: 1.5rem;
+    text-align: center;
+}
 .sent{
     margin: 0 10%;
 }
