@@ -445,11 +445,11 @@ a {
     color: var(--gray);
 }
 
-.project--caption {
+.project--caption img {
     margin-top: 10px;
-    width: 250px;
+    width: 260px;
     height: 150px;
-    outline: var(--gray) solid 2px;
+    /* outline: var(--gray) solid 2px; */
 }
 
 .project--subcontainer {
@@ -481,9 +481,16 @@ a {
     transform: scale(1.1); 
 }
 
-.project--button p{
+.project--button a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.project--button a p{
     font-weight: 700;
-    margin: auto 0;
+    margin: auto 5px;
 }
 
 .icons8-github2__img { 
