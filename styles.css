@@ -26,7 +26,7 @@ html {
     text-align: center;
 }
 .section{
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -41,15 +41,20 @@ a {
 
 /* header Navbar */
 
-.navbar{
-    width: 100vw;
+#header{
+    width: 100%;
+    max-width: 1325px;
+}
+
+#header .navbar{
+    width: 100%;
     background-color: var(--gray);
     z-index: 1;
 }
-.navbar-brand{
+#header .navbar-brand{
     height: 40px;
     width: 200px;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 2rem;
     background-image: url("https://imagizer.imageshack.com/v2/xq90/922/dECvgG.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -75,13 +80,14 @@ a {
 }
 #principalLayer{
     height: auto;
-    width: 100vw;
+    width: 100%;
+    max-width: 1349px;
     background-color: rgba(0, 0, 0,75%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 .principalContainer{
     display: flex;
@@ -90,7 +96,7 @@ a {
     align-items: center;
     width: auto;
     height: 35rem;
-    margin: 3rem auto 0;
+    margin: 9rem auto 7rem;
 }
 .principalContainer--img{
     height: 200px;
@@ -179,7 +185,8 @@ a {
     }
     #principalLayer{
         height: 100vh;
-        width: 100vw;
+        width: 100%;
+        max-width: 1349px;
     }    
     .principalContainer--img{
         height: 300px;
@@ -543,6 +550,7 @@ a {
         grid-template-columns: repeat(3, 400px);
         grid-template-rows: 1fr 1fr;
     }
+
 }
 
 
@@ -639,7 +647,7 @@ a {
 /* Footer */
 #footer{
     background-color: var(--gray);
-    width: 100vw;
+    width: 100%;
 }
 
 .nav--footer {
@@ -714,6 +722,10 @@ footer nav div p {
     transition: all 0.3s ease-in-out 0s ; 
 }
 @media screen and (min-width:700px) {
+    #footer{
+        background-color: var(--gray);
+        width: 100%;
+    }
     .nav--footer ul{
         width: 60%;
     }
